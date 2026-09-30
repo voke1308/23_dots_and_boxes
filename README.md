@@ -76,3 +76,17 @@ Submission is only the following three things:
 - [ ] A 10-second video of gameplay **before** your changes, showing the bug/broken behavior
 - [ ] A 10-second video of gameplay **after** your changes, showing the bug fixed and the new features working
 - [ ] The Chat/LLM used page link, with the complete chat history
+
+## Changes Made in Lab 4
+
+### Task 1 – Bug Fix
+Completed boxes now track the player who claimed them and display P1/P2 instead of a generic X. Existing scoring and extra-turn behavior is preserved.
+
+### Task 2 – New Feature
+Added customizable board dimensions at game startup, allowing players to choose different grid sizes such as 2x2 or 3x3.
+
+### Task 3 – Validation and Robustness
+Added input parsing and validation for malformed commands, invalid coordinates, negative values, invalid orientations, and repeated moves. Invalid moves do not modify the board, score, or turn.
+
+### Task 4 – Automated Testing
+Added `test_dots_and_boxes.py` using Python's standard unittest framework. Tests cover valid horizontal and vertical moves, invalid/repeated moves, box completion, input parsing, and the end-of-game condition.
