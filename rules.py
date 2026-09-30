@@ -16,5 +16,20 @@ def valid_move(board, orientation, row, col):
     )
 
 
-def completed_boxes(board, before):
-    return len(board.completed - before)
+def parse_move(raw_input):
+    parts = raw_input.strip().upper().split()
+
+    if len(parts) != 3:
+        return None
+
+    orientation, r_str, c_str = parts
+
+    if orientation not in {"H", "V"}:
+        return None
+
+    try:
+        row = int(r_str)
+        col = int(c_str)
+        return orientation, row, col
+    except ValueError:
+        return None
